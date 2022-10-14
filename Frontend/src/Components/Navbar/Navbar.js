@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { BiSearch } from "react-icons/bi";
-import { BsCart2 } from "react-icons/bs";
+import { BsCart2, BsHeart } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import Cart from '../Cart/Cart';
 import { useSelector } from 'react-redux'
@@ -41,10 +41,10 @@ const Navbar = () => {
 
           </div>
           {/* Cart */}
-          <div className="w-1/4 px-2 py-4  flex items-center justify-center gap-4">
+          <div className="w-1/4 px-2 py-4  flex items-center justify-center gap-6">
             <motion.div className=""
               whileTap={{ scale: 0.75 }}>
-              <CgProfile className='w-6 h-6 cursor-pointer' />
+              <BsHeart className='w-6 h-6 cursor-pointer' />
             </motion.div>
             <motion.div className="relative"
               whileTap={{ scale: 0.75 }}>
