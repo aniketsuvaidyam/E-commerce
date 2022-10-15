@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { IoFastFood } from 'react-icons/io5'
-import { categoryData } from '../Cart/Product'
+import { categoryData } from '../../../Common/Cart/Product'
 import { motion } from 'framer-motion'
 
 const Category = () => {
