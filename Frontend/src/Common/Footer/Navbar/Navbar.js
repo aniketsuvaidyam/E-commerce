@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { BiSearch } from "react-icons/bi";
 import { BsCart2, BsHeart } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
-import Cart from '../Cart/Cart';
+import Cart from '../../../Components/Cart/Cart';
 import { useSelector } from 'react-redux'
 import { motion } from 'framer-motion'
 

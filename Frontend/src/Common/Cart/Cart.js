@@ -5,7 +5,7 @@ import { BiMinus, BiPlus } from 'react-icons/bi'
 import { motion } from 'framer-motion'
 import { useDispatch } from 'react-redux'
 import { products } from './Product'
-import { AddToCart } from '../State/Action/action'
+import { AddToCart } from '../../State/Action/action'
 
 const Cart = () => {
   const dispatch = useDispatch()
