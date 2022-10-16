@@ -7,6 +7,7 @@ import { BsStarHalf, BsFillCaretLeftFill, BsStarFill, BsFillCaretRightFill } fro
 import { MdAdd } from "react-icons/md";
 import { BiRupee } from "react-icons/bi";
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 
 const MainContainer = () => {
@@ -28,9 +29,9 @@ const MainContainer = () => {
                                         <div className="px-2 py-1 rounded-xl bg-yellow-400">
                                             <p className='text-xs font-bold text-white'>50% off</p>
                                         </div>
-                                        <div className="hidden group-hover:block">
-                                            <BsHeart className='cursor-pointer text-xl' />
-                                        </div>
+                                        <motion.div whileTap={{ scale: 0.75 }} className="hidden group-hover:block">
+                                            <BsHeart className='cursor-pointer text-orange-500 text-xl' />
+                                        </motion.div>
                                     </div>
                                     <Link to='/ProductDetails' className="w-full flex flex-col justify-center items-center mt-2 md:mt-8">
                                         <img className='w-1/2 ' src={item.img} alt="" />
@@ -39,14 +40,14 @@ const MainContainer = () => {
                                         <h2 className='font-medium'>{item.name}</h2>
                                     </div>
                                     <div className="flex gap-1">
-                                        <BsStarFill className='text-xl text-red-500' />
-                                        <BsStarFill className='text-xl text-red-500' />
-                                        <BsStarFill className='text-xl text-red-500' />
-                                        <BsStarHalf className='text-xl text-red-500' />
-                                        <FaRegStar className='text-xl text-red-500' />
+                                        <BsStarFill className='text-xl text-orange-500' />
+                                        <BsStarFill className='text-xl text-orange-500' />
+                                        <BsStarFill className='text-xl text-orange-500' />
+                                        <BsStarHalf className='text-xl text-orange-500' />
+                                        <FaRegStar className='text-xl text-orange-500' />
                                     </div>
                                     <div className="flex justify-between ">
-                                        <p className='flex items-center text-md font-bold text-yellow-400'><BiRupee />{item.price}</p>
+                                        <p className='flex items-center text-md font-bold text-orange-500'><BiRupee />{item.price}</p>
                                         <div className="p-1 border-2 cursor-pointer"> <MdAdd className='text-xl text-yellow-500' /></div>
                                     </div>
                                 </div>
@@ -55,15 +56,15 @@ const MainContainer = () => {
                     </div>
                     <div className="flex w-full  justify-between absolute items-center h-full ">
                         <div className="group z-[100]">
-                            <div className="w-8 h-24 rounded-r-xl bg-slate-50 group-hover:bg-yellow-400 
+                            <div className="w-8 h-24 rounded-r-xl bg-orange-200 group-hover:bg-orange-500  
                         cursor-pointer  flex items-center justify-center">
-                                <BsFillCaretLeftFill className='text-2xl text-gray-400 group-hover:text-gray-800' />
+                                <BsFillCaretLeftFill className='text-2xl text-gray-50 group-hover:text-white' />
                             </div>
                         </div>
                         <div className="group z-[100]">
-                            <div className="w-8 h-24 rounded-l-xl  bg-slate-50 group-hover:bg-yellow-400  cursor-pointer 
+                            <div className="w-8 h-24 rounded-l-xl  bg-orange-200 group-hover:bg-orange-500  cursor-pointer 
                         flex items-center justify-center">
-                                <BsFillCaretRightFill className='text-2xl text-gray-300 group-hover:text-gray-800' />
+                                <BsFillCaretRightFill className='text-2xl text-gray-50 group-hover:text-white' />
                             </div>
                         </div>
                     </div>
