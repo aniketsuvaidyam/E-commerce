@@ -36,10 +36,10 @@ const MainContainer = () => {
                 removeArrowOnDeviceType={["tablet", "mobile"]}
 
             >
-                <div className='px-24 pt-8 p-5 bg-[#f6f9fc]'>
+                <div className=' py-2 px-2 md:px-24 md:pt-8 md:p-5 bg-[#f6f9fc]'>
                     <div className='flex flex-col gap-3'>
                         <h1 className='text-2xl font-bold'>Flash Delas</h1>
-                        <div className="flex w-full gap-6">
+                        <div className="flex w-full gap-2 md:gap-6">
                             {Datas && Datas.map(item => (
                                 <div key={item.id} className="w-1/4 flex flex-col justify-between  shadow-md p-3 rounded-md bg-white group">
                                     <div className="flex justify-between">
@@ -50,8 +50,8 @@ const MainContainer = () => {
                                             <BsHeart className='cursor-pointer text-xl' />
                                         </div>
                                     </div>
-                                    <div className="flex flex-col justify-center items-center mt-8">
-                                        <img className='' src={item.img} alt="" />
+                                    <div className="flex flex-col justify-center items-center ">
+                                        <img className='w-20 md:w-36 md:h-36 h-28' src={item.img} alt="" />
                                     </div>
                                     <h2 className='font-medium'>{item.name}</h2>
                                 </div>
