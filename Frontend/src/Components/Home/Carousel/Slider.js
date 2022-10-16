@@ -40,7 +40,7 @@ const Slider = () => {
           bannerData.map((data) => {
             return (
               <div className=''>
-                <img className=' w-full h-56' src={data.url} alt="" />
+                <img className=' md:w-full h-36  w-fit md:h-56' src={data.url} alt="" />
               </div>
             )
           }
