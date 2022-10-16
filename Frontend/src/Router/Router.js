@@ -5,6 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 import Home from '../Components/Home/Home';
+import ProductDetails from '../Components/Other/ProductDetails/ProductDetails';
 
 const Router = () => {
   return (
@@ -12,6 +13,7 @@ const Router = () => {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
+          <Route path="/ProductDetails" element={<ProductDetails />} />
         </Routes>
       </BrowserRouter>
     </div>
