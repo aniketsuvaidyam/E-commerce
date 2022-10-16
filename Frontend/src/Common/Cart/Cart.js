@@ -3,13 +3,9 @@ import { MdOutlineKeyboardBackspace, MdDelete } from 'react-icons/md'
 import { RiRefreshFill } from 'react-icons/ri'
 import { BiMinus, BiPlus } from 'react-icons/bi'
 import { motion } from 'framer-motion'
-import { useDispatch } from 'react-redux'
 import { products } from './Product'
-import { AddToCart } from '../../State/Action/action'
 
-const Cart = () => {
-  const dispatch = useDispatch()
-  // console.log(dispatch)
+const Cart = (props) => {
   return (
     <>
       <motion.div
@@ -17,10 +13,10 @@ const Cart = () => {
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 200 }}
         className="fixed top-0 right-0 w-full md:w-[430px] h-screen bg-gray-100 drop-shadow-md
-             flex flex-col z-50">
+             flex flex-col z-[2000]">
         <div className="w-full flex items-center justify-between p-4">
           <motion.div whileTap={{ scale: 0.75 }} >
-            <MdOutlineKeyboardBackspace className='text-gray-600 text-xl cursor-pointer' onClick={() => dispatch(AddToCart(true))} />
+            <MdOutlineKeyboardBackspace className='text-gray-600 text-xl cursor-pointer' onClick={props.cart} />
           </motion.div>
           <p className='text-gray-600 text-lg font-semibold'>Cart</p>
           <motion.p whileTap={{ scale: 0.75 }} className='flex items-center gap-2 p-1 px-2 my-2 bg-gray-200 rounded-md hover:shadow-md
