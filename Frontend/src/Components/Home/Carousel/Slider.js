@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { bannerData } from '../../../bannerData'
+import { bannerData } from '../../data'
 
 const Slider = () => {
 
@@ -39,8 +39,8 @@ const Slider = () => {
         {
           bannerData.map((data) => {
             return (
-              <div className=''>
-                <img className=' md:w-full h-36  w-fit md:h-56' src={data.url} alt="" />
+              <div key={data.id} className=''>
+                <img className=' md:w-full h-44  w-fit md:h-64' src={data.url} alt="" />
               </div>
             )
           }

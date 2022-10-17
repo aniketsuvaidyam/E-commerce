@@ -2,13 +2,15 @@ import React, { useState } from 'react'
 import { BiSearch } from "react-icons/bi";
 import { BsFillHeartFill } from "react-icons/bs";
 import { HiShoppingCart } from "react-icons/hi";
-import { CgProfile } from "react-icons/cg";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { FaBars } from "react-icons/fa";
 import Cart from '../Cart/Cart';
 import { motion } from 'framer-motion'
 import User from './User';
 
 const Navbar = () => {
+
+  const [login, setLogin] = useState(true)
 
   const [openCart, setOpenCart] = useState(true)
   const [openUserMenu, setOpenUserMenu] = useState(true)
@@ -50,6 +52,16 @@ const Navbar = () => {
           </div>
           {/* Cart */}
           <div className="w-1/5 px-2 py-4  flex items-center justify-center gap-6">
+            {login === false ? <motion.div className=""
+              whileTap={{ scale: 0.85 }}>
+              <button className='bg-white px-6 font-semibold text-orange-500 rounded-sm py-0.5 flex items-center'>Login</button>
+            </motion.div> : <p className='text-white relative font-semibold cursor-pointer flex items-center justify-center group'>Rahul
+              <MdKeyboardArrowDown className='text-xl block group-hover:hidden' />
+              <MdKeyboardArrowUp className='text-xl hidden group-hover:block' />
+              <div className=" absolute top-12 hidden group-hover:block">
+                <User className='w-full' />
+              </div>
+            </p>}
             <motion.div className=""
               whileTap={{ scale: 0.75 }}>
               <BsFillHeartFill className='w-6 h-6 cursor-pointer text-white' />
@@ -60,10 +72,7 @@ const Navbar = () => {
               <p className='absolute bg-yellow-400 rounded-full w-4 h-4 flex items-center 
             text-white justify-center font-medium -top-2.5  -right-2.5 text-xs'>1</p>
             </motion.div>
-            <motion.div className=""
-              whileTap={{ scale: 0.75 }}>
-              <CgProfile className='w-7 h-7 cursor-pointer text-white' />
-            </motion.div>
+
           </div>
           {(openCart === false) ? <Cart cart={cart} /> : <></>}
         </div>
