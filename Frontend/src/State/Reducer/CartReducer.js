@@ -1,9 +1,8 @@
-const int = {
+const initialstate = {
     carts: []
 }
 
-const cartReducer = (state = int, action) => {
-    console.log('state', state)
+export const cartReducer = (state = initialstate, action) => {
     switch (action.type) {
         case 'ADD_TO_CART':
             return {
@@ -12,6 +11,4 @@ const cartReducer = (state = int, action) => {
             }
         default: return state;
     }
-}
-
-export default cartReducer; 
+};

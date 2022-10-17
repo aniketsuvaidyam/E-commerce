@@ -7,9 +7,12 @@ import { FaBars } from "react-icons/fa";
 import Cart from '../Cart/Cart';
 import { motion } from 'framer-motion'
 import User from './User';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
 
+  const count = useSelector((state) => state.cartReducer.carts)
+  console.log(count.length)
   const [login, setLogin] = useState(true)
 
   const [openCart, setOpenCart] = useState(true)
@@ -69,8 +72,8 @@ const Navbar = () => {
             <motion.div className="relative"
               whileTap={{ scale: 0.75 }}>
               <HiShoppingCart className='w-7 h-7 cursor-pointer text-white' onClick={cart} />
-              <p className='absolute bg-yellow-400 rounded-full w-4 h-4 flex items-center 
-            text-white justify-center font-medium -top-2.5  -right-2.5 text-xs'>1</p>
+              {count.length === 0 ? <></> : <p className='absolute bg-yellow-400 rounded-full w-4 h-4 flex items-center 
+            text-white justify-center font-medium -top-2.5  -right-2.5 text-xs'>{count.length}</p>}
             </motion.div>
 
           </div>
@@ -100,7 +103,7 @@ const Navbar = () => {
               whileTap={{ scale: 0.75 }}>
               <HiShoppingCart className='w-7 h-7 cursor-pointer text-white' onClick={cart} />
               <p className='absolute bg-yellow-400 rounded-full w-4 h-4 flex items-center 
-            text-white justify-center font-medium -top-2.5  -right-2.5 text-xs'>1</p>
+            text-white justify-center font-medium -top-2.5  -right-2.5 text-xs'>{count.length}</p>
             </motion.div>
 
           </div>
