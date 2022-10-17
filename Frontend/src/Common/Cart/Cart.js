@@ -1,11 +1,14 @@
 import React from 'react'
 import { MdDelete, MdKeyboardBackspace } from 'react-icons/md'
 import { RiRefreshFill } from 'react-icons/ri'
-import { BiMinus, BiPlus } from 'react-icons/bi'
+import { BiMinus, BiPlus, BiRupee } from 'react-icons/bi'
 import { motion } from 'framer-motion'
-import { products } from './Product'
+import { useSelector } from 'react-redux'
 
 const Cart = (props) => {
+
+  const items = useSelector((state) => state.cartReducer.carts)
+  console.log(items)
   return (
     <>
       <motion.div
@@ -31,13 +34,13 @@ const Cart = (props) => {
             <div className="">
               <div className="flow-root">
                 <ul role="list" className="-my-6 divide-y divide-gray-200">
-                  {products.map((product) => (
+                  {items.map((product) => (
                     <li key={product.id} className="flex py-2 bg-white my-2 px-4 rounded-xl">
-                      <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                      <div className="w-32 h-28 flex justify-center ">
                         <img
-                          src={product.imageSrc}
+                          src={product.img}
                           alt={product.imageSrc}
-                          className="h-full w-full object-cover object-center"
+                          className="h-full   object-center"
                         />
                       </div>
 
@@ -47,7 +50,7 @@ const Cart = (props) => {
                             <h3>
                               <a href={product.href}>{product.name}</a>
                             </h3>
-                            <p className="ml-4">{product.price}</p>
+                            <p className="ml-4 flex items-center"><BiRupee /> {product.price}</p>
                           </div>
                           <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                         </div>
