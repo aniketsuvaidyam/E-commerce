@@ -6,7 +6,10 @@ import Router from './Router/Router';
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <div className="fixed z-[1500] w-full">
+        <Navbar />
+      </div>
+      <div className="h-[74px]"></div>
       <Router />
       <Footer />
     </div>

@@ -5,7 +5,6 @@ import { HiShoppingCart } from "react-icons/hi";
 import { CgProfile } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
 import Cart from '../Cart/Cart';
-import { useSelector } from 'react-redux'
 import { motion } from 'framer-motion'
 import User from './User';
 
@@ -13,8 +12,6 @@ const Navbar = () => {
 
   const [openCart, setOpenCart] = useState(true)
   const [openUserMenu, setOpenUserMenu] = useState(true)
-  const setcart = useSelector((state) => state.openCart)
-  console.log(setcart)
   const cart = () => {
     setOpenCart(!openCart)
   }

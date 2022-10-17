@@ -31,7 +31,7 @@ export const Datas = [
         price: 1599
     },
     {
-        id: 2,
+        id: 7,
         img: 'https://rukminim1.flixcart.com/image/200/200/kyhlfgw0/smartwatch/9/7/j/-original-imagaptbtq6ukjms.jpeg?q=70',
         name: 'Watch',
         price: 1599
@@ -49,7 +49,7 @@ export const Datas = [
         price: 5099
     },
     {
-        id: 2,
+        id: 8,
         img: 'https://rukminim1.flixcart.com/image/200/200/kyhlfgw0/smartwatch/9/7/j/-original-imagaptbtq6ukjms.jpeg?q=70',
         name: 'Watch',
         price: 1599

@@ -1,16 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BsHeart } from "react-icons/bs";
 import { Datas } from '../../data';
 import { IoFlash } from "react-icons/io5";
 import { FaRegStar } from "react-icons/fa";
 import { BsStarHalf, BsFillCaretLeftFill, BsStarFill, BsFillCaretRightFill } from "react-icons/bs";
-import { MdAdd } from "react-icons/md";
+import { MdShoppingBasket } from "react-icons/md";
 import { BiRupee } from "react-icons/bi";
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-
+import { useDispatch } from 'react-redux';
+import { Add } from '../../../State/Action/action'
 
 const MainContainer = () => {
+
+    const [data, setData] = useState(Datas)
+
+    const dispatch = useDispatch()
+
+    const SetToCart = (e) => {
+        dispatch(Add(e))
+    }
 
     return (
         <>
@@ -23,7 +32,7 @@ const MainContainer = () => {
 
                     <div className="overflow-x-scroll scrollbar-none w-full ">
                         <div className="flex w-full gap-3 md:gap-6 pb-4">
-                            {Datas && Datas.map(item => (
+                            {data && data.map(item => (
                                 <div key={item.id} className="w-1/6 z-20  min-w-[182px] md:w-1/5 md:min-w-[246px] flex flex-col justify-between  shadow-md p-3 rounded-md bg-white group">
                                     <div className="w-full flex justify-between">
                                         <div className="px-2 py-1 rounded-xl bg-yellow-400">
@@ -48,7 +57,7 @@ const MainContainer = () => {
                                     </div>
                                     <div className="flex justify-between ">
                                         <p className='flex items-center text-md font-bold text-orange-500'><BiRupee />{item.price}</p>
-                                        <div className="p-1 border-2 cursor-pointer"> <MdAdd className='text-xl text-yellow-500' /></div>
+                                        <div className=" cursor-pointer " onClick={() => SetToCart(item)}> <MdShoppingBasket className='text-2xl text-orange-500' /></div>
                                     </div>
                                 </div>
                             ))}
