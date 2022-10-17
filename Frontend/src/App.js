@@ -9,7 +9,7 @@ function App() {
       <div className="fixed z-[1500] w-full">
         <Navbar />
       </div>
-      <div className="h-[74px]"></div>
+      <div className="h-[106px] md:h-[74px]"></div>
       <Router />
       <Footer />
     </div>
