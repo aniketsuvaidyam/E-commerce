@@ -1,7 +1,6 @@
-export const AddToCart = (cart) => {
-    // console.log("hgdfhg", cart)
+export const Add = (item) => {
     return {
-        type: 'CART',
-        payload: cart
+        type: 'ADD_TO_CART',
+        payload: item
     }
 }
