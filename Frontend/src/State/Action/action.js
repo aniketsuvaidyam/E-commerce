@@ -10,3 +10,9 @@ export const Del = (id) => {
         payload: id
     }
 }
+export const CartInc = (item) => {
+    return {
+        type: 'CART_DIC',
+        payload: item
+    }
+}
