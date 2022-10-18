@@ -8,13 +8,17 @@ import Cart from '../Cart/Cart';
 import { motion } from 'framer-motion'
 import User from './User';
 import { useSelector } from 'react-redux';
+import Login from '../../Components/Other/Login/Login';
 
 const Navbar = () => {
 
   const count = useSelector((state) => state.cartReducer.carts)
-  const [login, setLogin] = useState(true)
+  const [login, setLogin] = useState(false)
+
+  const [loginForm, setLoginForm] = useState(true)
 
   const [openCart, setOpenCart] = useState(true)
+
   const [openUserMenu, setOpenUserMenu] = useState(true)
   const cart = () => {
     setOpenCart(!openCart)
@@ -22,10 +26,13 @@ const Navbar = () => {
   const openMenu = () => {
     setOpenUserMenu(!openUserMenu)
   }
+  const openLogin = () => {
+    setLoginForm(!loginForm)
+  }
 
   return (
     <>
-      <div className="hidden md:block w-full bg-orange-500 shadow-md ">
+      <div className="hidden md:block w-full bg-orange-500 shadow-md relative">
         <div className="flex  mx-auto max-w-[1720px]">
           {/* Logo */}
           <div className="w-1/5 py-4 flex  justify-center items-center">
@@ -56,8 +63,10 @@ const Navbar = () => {
           <div className="w-1/5 px-2 py-4  flex items-center justify-center gap-6">
             {login === false ? <motion.div className=""
               whileTap={{ scale: 0.85 }}>
-              <button className='bg-white px-6 font-semibold text-orange-500 rounded-sm py-0.5 flex items-center'>Login</button>
-            </motion.div> : <p className='text-white relative font-semibold cursor-pointer flex items-center justify-center group'>Rahul
+              <button className='bg-white px-6 font-semibold text-orange-500 rounded-sm
+               py-0.5 flex items-center' onClick={openLogin}>Login</button>
+            </motion.div> : <p className='text-white relative font-semibold cursor-pointer
+             flex items-center justify-center group'>Rahul
               <MdKeyboardArrowDown className='text-xl block group-hover:hidden' />
               <MdKeyboardArrowUp className='text-xl hidden group-hover:block' />
               <div className=" absolute top-12 hidden group-hover:block">
@@ -78,6 +87,7 @@ const Navbar = () => {
           </div>
           {(openCart === false) ? <Cart cart={cart} /> : <></>}
         </div>
+        {(loginForm === false) ? <Login /> : <></>}
       </div>
 
 
@@ -101,8 +111,8 @@ const Navbar = () => {
             <motion.div className="relative"
               whileTap={{ scale: 0.75 }}>
               <HiShoppingCart className='w-7 h-7 cursor-pointer text-white' onClick={cart} />
-              <p className='absolute bg-yellow-400 rounded-full w-4 h-4 flex items-center 
-            text-white justify-center font-medium -top-2.5  -right-2.5 text-xs'>{count.length}</p>
+              {count.length === 0 ? <></> : <p className='absolute bg-yellow-400 rounded-full w-4 h-4 flex items-center 
+            text-white justify-center font-medium -top-2.5  -right-2.5 text-xs'>{count.length}</p>}
             </motion.div>
 
           </div>
