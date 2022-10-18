@@ -42,7 +42,7 @@ const MainContainer = () => {
                                             <BsHeart className='cursor-pointer text-orange-500 text-xl' />
                                         </motion.div>
                                     </div>
-                                    <Link to='/ProductDetails' className="w-full flex flex-col justify-center items-center mt-2 md:mt-8">
+                                    <Link to={`/ProductDetails/${item.id}`} className="w-full flex flex-col justify-center items-center mt-2 md:mt-8">
                                         <img className='w-1/2 ' src={item.img} alt="" />
                                     </Link>
                                     <div className="flex flex-col justify-end h-full ">

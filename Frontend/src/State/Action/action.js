@@ -4,3 +4,9 @@ export const Add = (item) => {
         payload: item
     }
 }
+export const Del = (id) => {
+    return {
+        type: 'DEL_ITEM',
+        payload: id
+    }
+}
