@@ -12,7 +12,6 @@ import { useSelector } from 'react-redux';
 const Navbar = () => {
 
   const count = useSelector((state) => state.cartReducer.carts)
-  console.log(count.length)
   const [login, setLogin] = useState(true)
 
   const [openCart, setOpenCart] = useState(true)

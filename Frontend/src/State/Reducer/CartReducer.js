@@ -9,6 +9,12 @@ export const cartReducer = (state = initialstate, action) => {
                 ...state,
                 carts: [...state.carts, action.payload]
             }
+        case 'DEL_ITEM':
+            const del = state.carts.filter((e) => e.id !== action.payload)
+            return {
+                ...state,
+                carts: del
+            }
         default: return state;
     }
 };
