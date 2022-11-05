@@ -19,6 +19,13 @@ export const bannerData = [
     { id: 4, url: 'https://rukminim1.flixcart.com/flap/3376/560/image/f6202f13b6f89b03.jpg?q=50' },
 
 ]
+export const proImg = [
+    { id: 1, url: 'https://rukminim1.flixcart.com/image/416/416/xif0q/smartwatch/2/k/8/-original-imagg8gjdphcbzuz.jpeg?q=70' },
+    { id: 2, url: 'https://rukminim1.flixcart.com/image/416/416/xif0q/smartwatch/2/k/8/-original-imagg8gjdphcbzuz.jpeg?q=70' },
+    { id: 3, url: 'https://rukminim1.flixcart.com/image/416/416/xif0q/smartwatch/2/k/8/-original-imagg8gjdphcbzuz.jpeg?q=70' },
+    { id: 4, url: 'https://rukminim1.flixcart.com/image/416/416/xif0q/smartwatch/2/k/8/-original-imagg8gjdphcbzuz.jpeg?q=70' },
+
+]
 
 
 

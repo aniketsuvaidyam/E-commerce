@@ -13,7 +13,7 @@ import Login from '../../Components/Other/Login/Login';
 const Navbar = () => {
 
   const count = useSelector((state) => state.cartReducer.carts)
-  const [login, setLogin] = useState(false)
+  const [login, setLogin] = useState(true)
 
   const [loginForm, setLoginForm] = useState(true)
 

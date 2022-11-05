@@ -10,6 +10,8 @@ const Cart = (props) => {
 
   const items = useSelector((state) => state.cartReducer.carts)
 
+  const totalPrice = items.reduce((price, item) => price + item.quantity * item.price, 0)
+
   const dispatch = useDispatch()
 
   const delitem = (id) => {
@@ -110,16 +112,16 @@ const Cart = (props) => {
                     justify-center px-8 py-2">
               <div className="w-full flex items-center justify-between">
                 <p className='text-white text-lg'>Sub Total</p>
-                <p className='text-white text-lg flex items-center'><BiRupee /> 8.5</p>
+                <p className='text-white text-lg flex items-center'><BiRupee />{totalPrice}</p>
               </div>
               <div className="w-full flex items-center justify-between">
                 <p className='text-white text-lg'>Delivery</p>
-                <p className='text-white text-lg flex items-center'><BiRupee /> 2.5</p>
+                <p className='text-white text-lg flex items-center'><BiRupee />40</p>
               </div>
               <div className="w-full border-b my-2 border-gray-100"></div>
               <div className="w-full flex items-center justify-between">
                 <p className='text-white text-lg font-semibold'>Total</p>
-                <p className='text-white text-lg font-semibold flex items-center'><BiRupee /> 11</p>
+                <p className='text-white text-lg font-semibold flex items-center'><BiRupee />{totalPrice + 40}</p>
               </div>
 
               <motion.button whileTap={{ scale: 0.8 }} type='button'
