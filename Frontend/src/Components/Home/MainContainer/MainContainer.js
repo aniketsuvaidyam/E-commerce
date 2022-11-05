@@ -23,7 +23,7 @@ const MainContainer = () => {
 
     return (
         <>
-            <div className='px-4 lg:px-24 pt-8 p-5 bg-[#f6f9fc]'>
+            <div className='px-4 lg:px-12 pt-8 p-5 bg-[#f6f9fc]'>
                 <div className='flex flex-col gap-3 relative'>
                     <div className="flex items-center gap-2">
                         <IoFlash className='text-xl text-yellow-400' />
@@ -33,7 +33,7 @@ const MainContainer = () => {
                     <div className="overflow-x-scroll scrollbar-none w-full ">
                         <div className="flex w-full gap-3 md:gap-6 pb-4">
                             {data && data.map(item => (
-                                <div key={item.id} className="w-1/6 z-20  min-w-[182px] md:w-1/5 md:min-w-[246px] flex flex-col justify-between  shadow-md p-3 rounded-md bg-white group">
+                                <div key={item.id} className="w-1/2 z-20  min-w-[182px] md:w-1/5 md:min-w-[265px] flex flex-col justify-between  shadow-md p-3 rounded-md bg-white group">
                                     <div className="w-full flex justify-between">
                                         <div className="px-2 py-1 rounded-xl bg-yellow-400">
                                             <p className='text-xs font-bold text-white'>50% off</p>
@@ -57,7 +57,8 @@ const MainContainer = () => {
                                     </div>
                                     <div className="flex justify-between ">
                                         <p className='flex items-center text-md font-bold text-orange-500'><BiRupee />{item.price}</p>
-                                        <div className=" cursor-pointer " onClick={() => SetToCart(item)}> <MdShoppingBasket className='text-2xl text-orange-500' /></div>
+                                        <motion.div whileTap={{ scale: 0.75 }} className=" cursor-pointer " onClick={() => SetToCart(item)}>
+                                            <MdShoppingBasket className='text-2xl text-orange-500' /></motion.div>
                                     </div>
                                 </div>
                             ))}
