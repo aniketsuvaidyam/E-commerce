@@ -1,4 +1,5 @@
 import React from 'react'
+import Brand from './Brand/Brand'
 import Slider from './Carousel/Slider'
 import Category from './Category/Category'
 import MainContainer from './MainContainer/MainContainer'
@@ -10,6 +11,7 @@ const Home = () => {
       <Slider />
       <Category />
       <MainContainer />
+      <Brand />
     </>
   )
 }
