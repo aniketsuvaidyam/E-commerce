@@ -45,13 +45,6 @@ export const Datas = [
         quantity: 1,
     },
     {
-        id: 7,
-        img: 'https://rukminim1.flixcart.com/image/200/200/kyhlfgw0/smartwatch/9/7/j/-original-imagaptbtq6ukjms.jpeg?q=70',
-        name: 'Watch',
-        price: 1599,
-        quantity: 1,
-    },
-    {
         id: 3,
         img: 'https://rukminim1.flixcart.com/image/200/200/camera/c/h/h/sony-cyber-shot-dsc-h300-advance-point-and-shoot-original-imadpzjmc3hwsnf7.jpeg?q=70',
         name: 'Black Camera',
@@ -66,10 +59,77 @@ export const Datas = [
         quantity: 1,
     },
     {
-        id: 8,
+        id: 5,
+        img: 'https://rukminim1.flixcart.com/image/200/200/xif0q/smartwatch/k/a/b/-original-imagh94fggh3chyj.jpeg?q=70',
+        name: 'BoAt Watch',
+        price: 599,
+        quantity: 1,
+    },
+    {
+        id: 6,
         img: 'https://rukminim1.flixcart.com/image/200/200/kyhlfgw0/smartwatch/9/7/j/-original-imagaptbtq6ukjms.jpeg?q=70',
         name: 'Watch',
         price: 1599,
         quantity: 1,
     },
+    {
+        id: 7,
+        img: 'https://rukminim1.flixcart.com/image/200/200/camera/c/h/h/sony-cyber-shot-dsc-h300-advance-point-and-shoot-original-imadpzjmc3hwsnf7.jpeg?q=70',
+        name: 'Black Camera',
+        price: 499,
+        quantity: 1,
+    },
+    {
+        id: 8,
+        img: 'https://rukminim1.flixcart.com/image/200/200/l1v1uvk0/tablet/9/c/s/6650034-realme-original-imagdc5ac3y7xgxh.jpeg?q=70',
+        name: 'Tablets',
+        price: 5099,
+        quantity: 1,
+    },
+
+]
+export const brands = [
+    {
+        id: 1,
+        img: 'https://rukminim1.flixcart.com/image/832/832/kkfrjww0/t-shirt/h/1/t/l-t312-cgblwh-new-eyebogler-original-imafzs5hrjgzsfpr.jpeg?q=70',
+        name: 'BoAt Watch',
+        price: 599,
+        quantity: 1,
+    },
+    {
+        id: 2,
+        img: 'https://rukminim1.flixcart.com/image/832/832/kkfrjww0/t-shirt/h/1/t/l-t312-cgblwh-new-eyebogler-original-imafzs5hrjgzsfpr.jpeg?q=70',
+        name: 'Watch',
+        price: 1599,
+        quantity: 1,
+    },
+    {
+        id: 3,
+        img: 'https://rukminim1.flixcart.com/image/832/832/kkfrjww0/t-shirt/h/1/t/l-t312-cgblwh-new-eyebogler-original-imafzs5hrjgzsfpr.jpeg?q=70',
+        name: 'Black Camera',
+        price: 499,
+        quantity: 1,
+    },
+    {
+        id: 4,
+        img: 'https://rukminim1.flixcart.com/image/832/832/kkfrjww0/t-shirt/h/1/t/l-t312-cgblwh-new-eyebogler-original-imafzs5hrjgzsfpr.jpeg?q=70',
+        name: 'Tablets',
+        price: 5099,
+        quantity: 1,
+    },
+    {
+        id: 5,
+        img: 'https://rukminim1.flixcart.com/image/832/832/kkfrjww0/t-shirt/h/1/t/l-t312-cgblwh-new-eyebogler-original-imafzs5hrjgzsfpr.jpeg?q=70',
+        name: 'BoAt Watch',
+        price: 599,
+        quantity: 1,
+    },
+    {
+        id: 6,
+        img: 'https://rukminim1.flixcart.com/image/832/832/kkfrjww0/t-shirt/h/1/t/l-t312-cgblwh-new-eyebogler-original-imafzs5hrjgzsfpr.jpeg?q=70',
+        name: 'Watch',
+        price: 1599,
+        quantity: 1,
+    },
+
 ]
